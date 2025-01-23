@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  animation: moveAndRotate 3s infinite ease-in-out, changeColor 3s infinite ease-in-out;
+}
+
+@keyframes moveAndRotate {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(300px) rotate(180deg);
+  }
+}
+
+@keyframes changeColor {
+  0%, 100% {
+    background-color: #3498db;
+  }
+  25% {
+    background-color: #e74c3c;
+  }
+  50% {
+    background-color: #2ecc71;
+  }
+  75% {
+    background-color: #f39c12;
+  }
+}
